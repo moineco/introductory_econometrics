@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -61,6 +124,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -183,7 +247,34 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introductory-econometrics" id="toc-introductory-econometrics" class="nav-link active" data-scroll-target="#introductory-econometrics"><span class="toc-section-number">2</span>  Introductory Econometrics</a>
+  <ul class="collapse">
+  <li><a href="#install-packages" id="toc-install-packages" class="nav-link" data-scroll-target="#install-packages"><span class="toc-section-number">2.1</span>  Install packages</a></li>
+  <li><a href="#useful-dataset" id="toc-useful-dataset" class="nav-link" data-scroll-target="#useful-dataset"><span class="toc-section-number">2.2</span>  Useful dataset</a></li>
+  <li><a href="#simple-regression-model" id="toc-simple-regression-model" class="nav-link" data-scroll-target="#simple-regression-model"><span class="toc-section-number">2.3</span>  Simple regression model</a>
+  <ul class="collapse">
+  <li><a href="#example-1-a-log-wage-equation" id="toc-example-1-a-log-wage-equation" class="nav-link" data-scroll-target="#example-1-a-log-wage-equation"><span class="toc-section-number">2.3.1</span>  <strong><code>Example 1:</code> A log wage equation</strong></a></li>
+  </ul></li>
+  <li><a href="#multiple-regression-analysis" id="toc-multiple-regression-analysis" class="nav-link" data-scroll-target="#multiple-regression-analysis"><span class="toc-section-number">2.4</span>  Multiple regression analysis</a>
+  <ul class="collapse">
+  <li><a href="#example-2-hourly-wage-equation" id="toc-example-2-hourly-wage-equation" class="nav-link" data-scroll-target="#example-2-hourly-wage-equation"><span class="toc-section-number">2.4.1</span>  <strong><code>Example 2:</code> Hourly wage equation</strong></a></li>
+  </ul></li>
+  <li><a href="#multiple-regression-analysis-inference" id="toc-multiple-regression-analysis-inference" class="nav-link" data-scroll-target="#multiple-regression-analysis-inference"><span class="toc-section-number">2.5</span>  Multiple regression analysis: inference</a>
+  <ul class="collapse">
+  <li><a href="#example-3-hourly-wage-equation" id="toc-example-3-hourly-wage-equation" class="nav-link" data-scroll-target="#example-3-hourly-wage-equation"><span class="toc-section-number">2.5.1</span>  <strong><code>Example 3:</code> Hourly Wage Equation</strong></a></li>
+  <li><a href="#example-4-effect-of-job-training-on-firm-scrap-rates" id="toc-example-4-effect-of-job-training-on-firm-scrap-rates" class="nav-link" data-scroll-target="#example-4-effect-of-job-training-on-firm-scrap-rates"><span class="toc-section-number">2.5.2</span>  <strong><code>Example 4:</code> Effect of Job Training on Firm Scrap Rates</strong></a></li>
+  </ul></li>
+  <li><a href="#chapter-5-multiple-regression-analysis-ols-asymptotics" id="toc-chapter-5-multiple-regression-analysis-ols-asymptotics" class="nav-link" data-scroll-target="#chapter-5-multiple-regression-analysis-ols-asymptotics"><span class="toc-section-number">2.6</span>  Chapter 5: Multiple Regression Analysis: OLS Asymptotics</a>
+  <ul class="collapse">
+  <li><a href="#example-housing-prices-and-distance-from-an-incinerator" id="toc-example-housing-prices-and-distance-from-an-incinerator" class="nav-link" data-scroll-target="#example-housing-prices-and-distance-from-an-incinerator"><span class="toc-section-number">2.6.1</span>  <strong><code>Example:</code> Housing Prices and Distance From an Incinerator</strong></a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -204,8 +295,1030 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div class="cell">
+
+</div>
+<section id="introductory-econometrics" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Introductory Econometrics</h1>
+<section id="install-packages" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="install-packages"><span class="header-section-number">2.1</span> Install packages</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wooldridge)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quantmod)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xts) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="useful-dataset" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="useful-dataset"><span class="header-section-number">2.2</span> Useful dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>earns <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/earns.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>gpa1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/gpa1.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>hprice1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/hprice1.csv"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>hprice2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/hprice2.csv"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>hprice3 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/hprice3.csv"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>jtrain <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/jtrain.csv"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>nyse <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/nyse.csv"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>phillips <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/phillips.csv"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>rdchem <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/rdchem.csv"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>traffic1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/traffic1.csv"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>wage1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/wage1.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="simple-regression-model" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="simple-regression-model"><span class="header-section-number">2.3</span> Simple regression model</h2>
+<section id="example-1-a-log-wage-equation" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="example-1-a-log-wage-equation"><span class="header-section-number">2.3.1</span> <strong><code>Example 1:</code> A log wage equation</strong></h3>
+<ul>
+<li>Load the <code>wage1</code> data and check out the documentation.</li>
+</ul>
+<p><span class="math inline">\(educ\)</span>: years of education</p>
+<p><span class="math inline">\(wage\)</span>: average hourly earnings</p>
+<p><span class="math inline">\(lwage\)</span>: log of the average hourly earnings</p>
+<ul>
+<li>First, make a scatter-plot of the two variables and look for possible patterns in the relationship between them.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> wage1<span class="sc">$</span>wage, <span class="at">x =</span> wage1<span class="sc">$</span>educ, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"orange"</span>,     </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex=</span><span class="fl">1.25</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Wages vs. Education, 1976"</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"years of education"</span>, <span class="at">ylab =</span> <span class="st">"Hourly wages"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">18</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(wage1<span class="sc">$</span>wage, <span class="at">side=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol type="1">
+<li><p>It appears that <strong><em>on average</em></strong>, more years of education, leads to higher wages.</p></li>
+<li><p>The example in the text is interested in the <em>return to another year of education</em>, or what the <strong><em>percentage</em></strong> change in wages one might expect for each additional year of education. To do so, one must use the <span class="math inline">\(log(\)</span><code>wage</code><span class="math inline">\()\)</span>. This has already been computed in the data set and is defined as <code>lwage</code>.</p></li>
+</ol>
+<ul>
+<li>Build a linear model to estimate the relationship between the <em>log of wage</em> (<code>lwage</code>) and <em>education</em> (<code>educ</code>).</li>
+</ul>
+<p><span class="math display">\[\widehat{log(wage)} = \beta_0 + \beta_1educ\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>log_wage_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(lwage <span class="sc">~</span> educ, <span class="at">data =</span> wage1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Print the <code>summary</code> of the results.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(log_wage_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = lwage ~ educ, data = wage1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.21158 -0.36393 -0.07263  0.29712  1.52339 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.583773   0.097336   5.998 3.74e-09 ***
+educ        0.082744   0.007567  10.935  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4801 on 524 degrees of freedom
+Multiple R-squared:  0.1858,    Adjusted R-squared:  0.1843 
+F-statistic: 119.6 on 1 and 524 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<ul>
+<li>Use the <code>stargazer</code> package to make beautiful table</li>
+</ul>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(<span class="at">type =</span> <span class="st">"html"</span>, log_wage_model, <span class="at">single.row =</span> <span class="cn">TRUE</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">digits =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+lwage
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+educ
+</td>
+<td>
+0.083<sup>***</sup> (0.008)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+0.584<sup>***</sup> (0.097)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+526
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.186
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.184
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.480 (df = 524)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+119.582<sup>***</sup> (df = 1; 524)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+<ul>
+<li>Plot the <span class="math inline">\(log(\)</span><code>wage</code><span class="math inline">\()\)</span> vs <code>educ</code>. The blue line represents the least squares fit.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> wage1<span class="sc">$</span>lwage, <span class="at">x =</span> wage1<span class="sc">$</span>educ, <span class="at">main =</span> <span class="st">"A Log Wage Equation"</span>, </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"black"</span>, <span class="at">cex=</span><span class="fl">1.25</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"years of education"</span>, <span class="at">ylab =</span> <span class="st">"log of average hourly wages"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xaxt=</span><span class="st">"n"</span>, <span class="at">frame =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">18</span>))</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(log_wage_model, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rug</span>(wage1<span class="sc">$</span>lwage, <span class="at">side=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="multiple-regression-analysis" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="multiple-regression-analysis"><span class="header-section-number">2.4</span> Multiple regression analysis</h2>
+<section id="example-2-hourly-wage-equation" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="example-2-hourly-wage-equation"><span class="header-section-number">2.4.1</span> <strong><code>Example 2:</code> Hourly wage equation</strong></h3>
+<p>Check the documentation for variable information</p>
+<p><strong><span class="math inline">\(lwage\)</span>:</strong> log of the average hourly earnings</p>
+<p><strong><span class="math inline">\(educ\)</span>:</strong> years of education</p>
+<p><strong><span class="math inline">\(exper\)</span>:</strong> years of potential experience</p>
+<p><strong><span class="math inline">\(tenutre\)</span>:</strong> years with current employer</p>
+<ul>
+<li>Plot the variables against <code>lwage</code> and compare their distributions and slope (<span class="math inline">\(\beta\)</span>) of the simple regression lines</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> wage1<span class="sc">$</span>lwage, <span class="at">x =</span> wage1<span class="sc">$</span>educ, <span class="at">col=</span><span class="st">"orange"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"years of education"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side=</span><span class="dv">2</span>, <span class="at">line=</span><span class="fl">2.5</span>, <span class="st">"Hourly wages"</span>, <span class="at">cex=</span><span class="fl">1.25</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">18</span>))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(lwage <span class="sc">~</span> educ, <span class="at">data=</span>wage1), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> wage1<span class="sc">$</span>lwage, <span class="at">x =</span> wage1<span class="sc">$</span>exper, <span class="at">col=</span><span class="st">"orange"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"years of experience"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">12.5</span>,<span class="dv">25</span>,<span class="fl">37.5</span>,<span class="dv">50</span>))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(lwage <span class="sc">~</span> exper, <span class="at">data=</span>wage1), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> wage1<span class="sc">$</span>lwage, <span class="at">x =</span> wage1<span class="sc">$</span>tenure, <span class="at">col=</span><span class="st">"orange"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"years with employer"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">11</span>,<span class="dv">22</span>,<span class="dv">33</span>,<span class="dv">44</span>))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(lwage <span class="sc">~</span> tenure, <span class="at">data=</span>wage1), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Estimate the model regressing <em>educ</em>, <em>exper</em>, and <em>tenure</em> against <em>log(wage)</em>.</li>
+</ul>
+<p><span class="math display">\[\widehat{log(wage)} = \beta_0 + \beta_1educ + \beta_3exper + \beta_4tenure\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>hourly_wage_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(lwage <span class="sc">~</span> educ <span class="sc">+</span> exper <span class="sc">+</span> tenure, <span class="at">data =</span> wage1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Print the estimated model coefficients:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">coefficients</span>(hourly_wage_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">coefficients</span>(hourly_wage_model), <span class="at">digits=</span><span class="dv">4</span>, <span class="at">col.names =</span> <span class="st">"Coefficients"</span>, <span class="at">align =</span> <span class="st">'l'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> Coefficients </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:left;"> 0.2844 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> educ </td>
+   <td style="text-align:left;"> 0.0920 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> exper </td>
+   <td style="text-align:left;"> 0.0041 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> tenure </td>
+   <td style="text-align:left;"> 0.0221 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<ul>
+<li>Plot the coefficients, representing percentage impact of each variable on <span class="math inline">\(log(\)</span><code>wage</code><span class="math inline">\()\)</span> for a quick comparison.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">sort</span>(<span class="dv">100</span><span class="sc">*</span>hourly_wage_model<span class="sc">$</span>coefficients[<span class="sc">-</span><span class="dv">1</span>]), <span class="at">horiz=</span><span class="cn">TRUE</span>, <span class="at">las=</span><span class="dv">1</span>,</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">" "</span>, <span class="at">main =</span> <span class="st">"Coefficients of Hourly Wage Equation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="multiple-regression-analysis-inference" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="multiple-regression-analysis-inference"><span class="header-section-number">2.5</span> Multiple regression analysis: inference</h2>
+<section id="example-3-hourly-wage-equation" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="example-3-hourly-wage-equation"><span class="header-section-number">2.5.1</span> <strong><code>Example 3:</code> Hourly Wage Equation</strong></h3>
+<p>Using the same model estimated in <strong><code>example 3</code></strong>, examine and compare the standard errors associated with each coefficient. Like the textbook, these are contained in parenthesis next to each associated coefficient.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(hourly_wage_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = lwage ~ educ + exper + tenure, data = wage1)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.05802 -0.29645 -0.03265  0.28788  1.42809 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.284360   0.104190   2.729  0.00656 ** 
+educ        0.092029   0.007330  12.555  &lt; 2e-16 ***
+exper       0.004121   0.001723   2.391  0.01714 *  
+tenure      0.022067   0.003094   7.133 3.29e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4409 on 522 degrees of freedom
+Multiple R-squared:  0.316, Adjusted R-squared:  0.3121 
+F-statistic: 80.39 on 3 and 522 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(<span class="at">type =</span> <span class="st">"html"</span>, hourly_wage_model,  <span class="at">single.row =</span> <span class="cn">TRUE</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+lwage
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+educ
+</td>
+<td>
+0.09203<sup>***</sup> (0.00733)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+exper
+</td>
+<td>
+0.00412<sup>**</sup> (0.00172)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+tenure
+</td>
+<td>
+0.02207<sup>***</sup> (0.00309)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+0.28436<sup>***</sup> (0.10419)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+526
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.31601
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.31208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.44086 (df = 522)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+80.39092<sup>***</sup> (df = 3; 522)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+<p>For the years of experience variable, or <code>exper</code>, use coefficient and Standard Error to compute the <span class="math inline">\(t\)</span> statistic:</p>
+<p><span class="math display">\[t_{exper} = \frac{0.004121}{0.001723} = 2.391\]</span></p>
+<p>Fortunately, <code>R</code> includes <span class="math inline">\(t\)</span> statistics in the <code>summary</code> of model diagnostics.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(hourly_wage_model)<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               Estimate  Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 0.284359541 0.104190379  2.729230 6.562466e-03
+educ        0.092028988 0.007329923 12.555246 8.824197e-32
+exper       0.004121109 0.001723277  2.391437 1.713562e-02
+tenure      0.022067218 0.003093649  7.133070 3.294407e-12</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">summary</span>(hourly_wage_model)<span class="sc">$</span>coefficients, <span class="at">align=</span><span class="st">"l"</span>, <span class="at">digits=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> Estimate </th>
+   <th style="text-align:left;"> Std. Error </th>
+   <th style="text-align:left;"> t value </th>
+   <th style="text-align:left;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:left;"> 0.284 </td>
+   <td style="text-align:left;"> 0.104 </td>
+   <td style="text-align:left;"> 2.729 </td>
+   <td style="text-align:left;"> 0.007 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> educ </td>
+   <td style="text-align:left;"> 0.092 </td>
+   <td style="text-align:left;"> 0.007 </td>
+   <td style="text-align:left;"> 12.555 </td>
+   <td style="text-align:left;"> 0.000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> exper </td>
+   <td style="text-align:left;"> 0.004 </td>
+   <td style="text-align:left;"> 0.002 </td>
+   <td style="text-align:left;"> 2.391 </td>
+   <td style="text-align:left;"> 0.017 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> tenure </td>
+   <td style="text-align:left;"> 0.022 </td>
+   <td style="text-align:left;"> 0.003 </td>
+   <td style="text-align:left;"> 7.133 </td>
+   <td style="text-align:left;"> 0.000 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<ul>
+<li>lets plot this results</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> hourly_wage_model<span class="sc">$</span>residuals, <span class="at">x =</span> hourly_wage_model<span class="sc">$</span>fitted.values , <span class="at">col=</span><span class="st">"orange"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Fitted Values"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side=</span><span class="dv">2</span>, <span class="at">line=</span><span class="fl">2.5</span>, <span class="st">"Model Residuals"</span>, <span class="at">cex=</span><span class="fl">1.25</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> hourly_wage_model<span class="sc">$</span>residuals, <span class="at">x =</span> wage1<span class="sc">$</span>educ, <span class="at">col=</span><span class="st">"green"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"years of education"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">18</span>))</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> hourly_wage_model<span class="sc">$</span>residuals, <span class="at">x =</span> wage1<span class="sc">$</span>exper, <span class="at">col=</span><span class="st">"gray"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, </span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"years of experience"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side=</span><span class="dv">2</span>, <span class="at">line=</span><span class="fl">2.5</span>, <span class="st">"Model Residuals"</span>, <span class="at">cex=</span><span class="fl">1.25</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">12.5</span>,<span class="dv">25</span>,<span class="fl">37.5</span>,<span class="dv">50</span>))</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> hourly_wage_model<span class="sc">$</span>residuals, <span class="at">x =</span> wage1<span class="sc">$</span>tenure, <span class="at">col=</span><span class="st">"blue"</span>, <span class="at">xaxt=</span><span class="st">"n"</span>, </span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"years with employer"</span>, <span class="at">xlab =</span> <span class="st">""</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="at">side =</span> <span class="dv">1</span>, <span class="at">at =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">11</span>,<span class="dv">22</span>,<span class="dv">33</span>,<span class="dv">44</span>))</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Plot the <span class="math inline">\(t\)</span> statistics for a visual comparison:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">sort</span>(<span class="fu">summary</span>(hourly_wage_model)<span class="sc">$</span>coefficients[<span class="sc">-</span><span class="dv">1</span>, <span class="st">"t value"</span>]), <span class="at">horiz=</span><span class="cn">TRUE</span>, <span class="at">las=</span><span class="dv">1</span>, </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">" "</span>, <span class="at">main =</span> <span class="st">"t statistics of Hourly Wage Equation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="example-4-effect-of-job-training-on-firm-scrap-rates" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="example-4-effect-of-job-training-on-firm-scrap-rates"><span class="header-section-number">2.5.2</span> <strong><code>Example 4:</code> Effect of Job Training on Firm Scrap Rates</strong></h3>
+<ul>
+<li>Load the <code>jtrain</code> data set. (From H. Holzer, R. Block, M. Cheatham, and J. Knott (1993), <em>Are Training Subsidies Effective? The Michigan Experience</em>, Industrial and Labor Relations Review 46, 625-636. The authors kindly provided the data.)</li>
+</ul>
+<p><strong><span class="math inline">\(year:\)</span></strong> 1987, 1988, or 1989</p>
+<p><strong><span class="math inline">\(union:\)</span></strong> =1 if unionized</p>
+<p><strong><span class="math inline">\(lscrap:\)</span></strong> Log(scrap rate per 100 items)</p>
+<p><strong><span class="math inline">\(hrsemp:\)</span></strong> (total hours training) / (total employees trained)<br>
+<strong><span class="math inline">\(lsales:\)</span></strong> Log(annual sales, $)</p>
+<p><strong><span class="math inline">\(lemploy:\)</span></strong> Log(umber of employees at plant)</p>
+<ul>
+<li><p>First, use the <code>subset</code> function and it’s argument by the same name to return observations which occurred in <strong>1987</strong> and are not <strong>union</strong>.</p></li>
+<li><p>At the same time, use the <code>select</code> argument to return only the variables of interest for this problem.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>jtrain_subset <span class="ot">&lt;-</span> <span class="fu">subset</span>(jtrain, <span class="at">subset =</span> (year <span class="sc">==</span> <span class="dv">1987</span> <span class="sc">&amp;</span> union <span class="sc">==</span> <span class="dv">0</span>), <span class="at">select =</span> <span class="fu">c</span>(year, union, lscrap, hrsemp, lsales, lemploy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Next, test for missing values. One can “eyeball” these with R Studio’s <code>View</code> function, but a more precise approach combines the <code>sum</code> and <code>is.na</code> functions to return the total number of observations equal to <code>NA</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(jtrain_subset))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 156</code></pre>
+</div>
+</div>
+<ul>
+<li>While <code>R</code>’s <code>lm</code> function will automatically remove missing <code>NA</code> values, eliminating these manually will produce more clearly proportioned graphs for exploratory analysis. Call the <code>na.omit</code> function to remove all missing values and assign the new <code>data.frame</code> object the name <strong><code>jtrain_clean</code></strong>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>jtrain_clean <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(jtrain_subset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>We use <code>jtrain_clean</code> to plot the variables of interest against <code>lscrap</code>. Visually observe the respective distributions for each variable, and compare the slope (<span class="math inline">\(\beta\)</span>) of the simple regression lines.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>point_size <span class="ot">&lt;-</span> <span class="fl">1.60</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> jtrain_clean<span class="sc">$</span>lscrap, <span class="at">x =</span> jtrain_clean<span class="sc">$</span>hrsemp, <span class="at">frame =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="at">main =</span> <span class="st">"Total (hours/employees) trained"</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"lightgrey"</span>, <span class="at">cex=</span>point_size)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="at">side=</span><span class="dv">2</span>, <span class="at">line=</span><span class="dv">2</span>, <span class="st">"Log(scrap rate)"</span>, <span class="at">cex=</span><span class="fl">1.25</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(lscrap <span class="sc">~</span> hrsemp, <span class="at">data=</span>jtrain_clean), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> jtrain_clean<span class="sc">$</span>lscrap, <span class="at">x =</span> jtrain_clean<span class="sc">$</span>lsales, <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Log(annual sales $)"</span>, <span class="at">ylab =</span> <span class="st">" "</span>, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"lightgrey"</span>, <span class="at">cex=</span>point_size)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(lscrap <span class="sc">~</span> lsales, <span class="at">data=</span>jtrain_clean), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> jtrain_clean<span class="sc">$</span>lscrap, <span class="at">x =</span> jtrain_clean<span class="sc">$</span>lemploy, <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">main =</span> <span class="st">"Log(# employees at plant)"</span>, <span class="at">ylab =</span> <span class="st">" "</span>, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"lightgrey"</span>, <span class="at">cex=</span>point_size)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(lscrap <span class="sc">~</span> lemploy, <span class="at">data=</span>jtrain_clean), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Now create the linear model regressing <code>hrsemp</code>(total hours training/total employees trained), <code>lsales</code>(log of annual sales), and <code>lemploy</code>(the log of the number of the employees), against <code>lscrap</code>(the log of the scrape rate).</li>
+</ul>
+<p><span class="math display">\[lscrap = \alpha + \beta_1 hrsemp + \beta_2 lsales + \beta_3 lemploy\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>linear_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(lscrap <span class="sc">~</span> hrsemp <span class="sc">+</span> lsales <span class="sc">+</span> lemploy, <span class="at">data =</span> jtrain_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Finally, print the complete summary diagnostics of the model.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(linear_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = lscrap ~ hrsemp + lsales + lemploy, data = jtrain_clean)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.6301 -0.7523 -0.4016  0.8697  2.8273 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept) 12.45837    5.68677   2.191   0.0380 *
+hrsemp      -0.02927    0.02280  -1.283   0.2111  
+lsales      -0.96203    0.45252  -2.126   0.0436 *
+lemploy      0.76147    0.40743   1.869   0.0734 .
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.376 on 25 degrees of freedom
+Multiple R-squared:  0.2624,    Adjusted R-squared:  0.1739 
+F-statistic: 2.965 on 3 and 25 DF,  p-value: 0.05134</code></pre>
+</div>
+</div>
+<ul>
+<li>Use <code>stargazer</code> to create representative table</li>
+</ul>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(<span class="at">type =</span> <span class="st">"html"</span>, linear_model, <span class="at">single.row =</span> <span class="cn">TRUE</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+lscrap
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+hrsemp
+</td>
+<td>
+-0.02927 (0.02280)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lsales
+</td>
+<td>
+-0.96203<sup>**</sup> (0.45252)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lemploy
+</td>
+<td>
+0.76147<sup>*</sup> (0.40743)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+12.45837<sup>**</sup> (5.68677)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+29
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.26243
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.17392
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+1.37604 (df = 25)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+2.96504<sup>*</sup> (df = 3; 25)
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>coefficient <span class="ot">&lt;-</span> <span class="fu">coef</span>(linear_model)[<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a> confidence <span class="ot">&lt;-</span> <span class="fu">confint</span>(linear_model, <span class="at">level =</span> <span class="fl">0.95</span>)[<span class="sc">-</span><span class="dv">1</span>,]</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>graph <span class="ot">&lt;-</span> <span class="fu">drop</span>(<span class="fu">barplot</span>(coefficient, <span class="at">ylim =</span> <span class="fu">range</span>(<span class="fu">c</span>(confidence)),</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">main =</span> <span class="st">"Coefficients &amp; 95% C.I. of variables on Firm Scrap Rates"</span>))  </span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(graph, coefficient, graph, confidence[,<span class="dv">1</span>], <span class="at">angle=</span><span class="dv">90</span>, <span class="at">length=</span><span class="fl">0.55</span>, <span class="at">col=</span><span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(graph, coefficient, graph, confidence[,<span class="dv">2</span>], <span class="at">angle=</span><span class="dv">90</span>, <span class="at">length=</span><span class="fl">0.55</span>, <span class="at">col=</span><span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="chapter-5-multiple-regression-analysis-ols-asymptotics" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="chapter-5-multiple-regression-analysis-ols-asymptotics"><span class="header-section-number">2.6</span> Chapter 5: Multiple Regression Analysis: OLS Asymptotics</h2>
+<section id="example-housing-prices-and-distance-from-an-incinerator" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="example-housing-prices-and-distance-from-an-incinerator"><span class="header-section-number">2.6.1</span> <strong><code>Example:</code> Housing Prices and Distance From an Incinerator</strong></h3>
+<ul>
+<li>We will use the <code>hprice3</code> data set.</li>
+</ul>
+<p><strong><span class="math inline">\(lprice:\)</span></strong> Log(selling price)</p>
+<p><strong><span class="math inline">\(ldist:\)</span></strong> Log(distance from house to incinerator, feet)</p>
+<p><strong><span class="math inline">\(larea:\)</span></strong> Log(square footage of house)</p>
+<ul>
+<li>Graph the prices of housing against distance from an incinerator:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y =</span> hprice3<span class="sc">$</span>price, <span class="at">x =</span> hprice3<span class="sc">$</span>dist, <span class="at">main =</span> <span class="st">" "</span>, <span class="at">xlab =</span> <span class="st">"Distance to Incinerator in feet"</span>, <span class="at">ylab =</span> <span class="st">"Selling Price"</span>,  <span class="at">frame =</span> <span class="cn">FALSE</span>, <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">bg =</span> <span class="st">"lightgrey"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(price <span class="sc">~</span> dist, <span class="at">data=</span>hprice3), <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Next, model the <span class="math inline">\(log(\)</span><code>price</code><span class="math inline">\()\)</span> against the <span class="math inline">\(log(\)</span><code>dist</code><span class="math inline">\()\)</span> to estimate the percentage relationship between the two.</li>
+</ul>
+<p><span class="math display">\[price = \alpha + \beta_1 dist\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>price_dist_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(lprice <span class="sc">~</span> ldist, <span class="at">data =</span> hprice3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Create another model that controls for “quality” variables, such as square footage <code>area</code> per house.</li>
+</ul>
+<p><span class="math display">\[price = \alpha + \beta_1 dist + \beta_2 area\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>price_area_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(lprice <span class="sc">~</span> ldist <span class="sc">+</span> larea, <span class="at">data =</span> hprice3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Compare the coefficients of both models. Notice that adding <code>area</code> improves the quality of the model, but also reduces the coefficient size of <code>dist</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(price_dist_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = lprice ~ ldist, data = hprice3)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.22356 -0.28076 -0.05527  0.27992  1.29332 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  8.25750    0.47383  17.427  &lt; 2e-16 ***
+ldist        0.31722    0.04811   6.594 1.78e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4117 on 319 degrees of freedom
+Multiple R-squared:  0.1199,    Adjusted R-squared:  0.1172 
+F-statistic: 43.48 on 1 and 319 DF,  p-value: 1.779e-10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(price_area_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = lprice ~ ldist + larea, data = hprice3)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.23380 -0.18820 -0.01723  0.21751  0.86039 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  3.49394    0.49065   7.121 7.18e-12 ***
+ldist        0.19623    0.03816   5.142 4.77e-07 ***
+larea        0.78368    0.05358  14.625  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.3188 on 318 degrees of freedom
+Multiple R-squared:  0.4738,    Adjusted R-squared:  0.4705 
+F-statistic: 143.2 on 2 and 318 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<ul>
+<li>Use <em><code>stargazer</code></em> for better table</li>
+</ul>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(<span class="at">type =</span> <span class="st">"html"</span>,price_dist_model, price_area_model,  <span class="at">single.row =</span> <span class="cn">TRUE</span>, <span class="at">header =</span> <span class="cn">FALSE</span>, <span class="at">digits=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+lprice
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+ldist
+</td>
+<td>
+0.31722<sup>***</sup> (0.04811)
+</td>
+<td>
+0.19623<sup>***</sup> (0.03816)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+larea
+</td>
+<td>
+</td>
+<td>
+0.78368<sup>***</sup> (0.05358)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+8.25750<sup>***</sup> (0.47383)
+</td>
+<td>
+3.49394<sup>***</sup> (0.49065)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+321
+</td>
+<td>
+321
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.11994
+</td>
+<td>
+0.47385
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.11718
+</td>
+<td>
+0.47054
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+0.41170 (df = 319)
+</td>
+<td>
+0.31883 (df = 318)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+43.47673<sup>***</sup> (df = 1; 319)
+</td>
+<td>
+143.19470<sup>***</sup> (df = 2; 318)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+<ul>
+<li>Graphing illustrates the larger coefficient for <code>area</code></li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="lecture_1_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
