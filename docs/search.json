@@ -40,5 +40,54 @@
     "title": "1  Nature and scope of Econometrics",
     "section": "2.6 Chapter 5: Multiple Regression Analysis: OLS Asymptotics",
     "text": "2.6 Chapter 5: Multiple Regression Analysis: OLS Asymptotics\n\n2.6.1 Example: Housing Prices and Distance From an Incinerator\n\nWe will use the hprice3 data set.\n\n\\(lprice:\\) Log(selling price)\n\\(ldist:\\) Log(distance from house to incinerator, feet)\n\\(larea:\\) Log(square footage of house)\n\nGraph the prices of housing against distance from an incinerator:\n\n\npar(mfrow=c(1,2))\nplot(y = hprice3$price, x = hprice3$dist, main = \" \", xlab = \"Distance to Incinerator in feet\", ylab = \"Selling Price\",  frame = FALSE, pch = 21, bg = \"lightgrey\")\nabline(lm(price ~ dist, data=hprice3), col = \"black\", lwd=2)\n\n\n\n\n\n\n\n\n\nNext, model the \\(log(\\)price\\()\\) against the \\(log(\\)dist\\()\\) to estimate the percentage relationship between the two.\n\n\\[price = \\alpha + \\beta_1 dist\\]\n\nprice_dist_model <- lm(lprice ~ ldist, data = hprice3)\n\n\nCreate another model that controls for “quality” variables, such as square footage area per house.\n\n\\[price = \\alpha + \\beta_1 dist + \\beta_2 area\\]\n\nprice_area_model <- lm(lprice ~ ldist + larea, data = hprice3)\n\n\nCompare the coefficients of both models. Notice that adding area improves the quality of the model, but also reduces the coefficient size of dist.\n\n\nsummary(price_dist_model)\n\n\nCall:\nlm(formula = lprice ~ ldist, data = hprice3)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.22356 -0.28076 -0.05527  0.27992  1.29332 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  8.25750    0.47383  17.427  < 2e-16 ***\nldist        0.31722    0.04811   6.594 1.78e-10 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.4117 on 319 degrees of freedom\nMultiple R-squared:  0.1199,    Adjusted R-squared:  0.1172 \nF-statistic: 43.48 on 1 and 319 DF,  p-value: 1.779e-10\n\nsummary(price_area_model)\n\n\nCall:\nlm(formula = lprice ~ ldist + larea, data = hprice3)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.23380 -0.18820 -0.01723  0.21751  0.86039 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  3.49394    0.49065   7.121 7.18e-12 ***\nldist        0.19623    0.03816   5.142 4.77e-07 ***\nlarea        0.78368    0.05358  14.625  < 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.3188 on 318 degrees of freedom\nMultiple R-squared:  0.4738,    Adjusted R-squared:  0.4705 \nF-statistic: 143.2 on 2 and 318 DF,  p-value: < 2.2e-16\n\n\n\nUse stargazer for better table\n\nstargazer(type = \"html\",price_dist_model, price_area_model,  single.row = TRUE, header = FALSE, digits=5)\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlprice\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nldist\n\n\n0.31722*** (0.04811)\n\n\n0.19623*** (0.03816)\n\n\n\n\nlarea\n\n\n\n\n0.78368*** (0.05358)\n\n\n\n\nConstant\n\n\n8.25750*** (0.47383)\n\n\n3.49394*** (0.49065)\n\n\n\n\n\n\n\n\nObservations\n\n\n321\n\n\n321\n\n\n\n\nR2\n\n\n0.11994\n\n\n0.47385\n\n\n\n\nAdjusted R2\n\n\n0.11718\n\n\n0.47054\n\n\n\n\nResidual Std. Error\n\n\n0.41170 (df = 319)\n\n\n0.31883 (df = 318)\n\n\n\n\nF Statistic\n\n\n43.47673*** (df = 1; 319)\n\n\n143.19470*** (df = 2; 318)\n\n\n\n\n\n\n\n\nNote:\n\n\np<0.1; p<0.05; p<0.01\n\n\n\n\n\nGraphing illustrates the larger coefficient for area"
+  },
+  {
+    "objectID": "lecture_2.html#estimation-of-parameters",
+    "href": "lecture_2.html#estimation-of-parameters",
+    "title": "2  Statistical Inference",
+    "section": "2.2 Estimation of parameters",
+    "text": "2.2 Estimation of parameters"
+  },
+  {
+    "objectID": "lecture_2.html#testing-of-hypotheses",
+    "href": "lecture_2.html#testing-of-hypotheses",
+    "title": "2  Statistical Inference",
+    "section": "2.3 Testing of hypotheses",
+    "text": "2.3 Testing of hypotheses"
+  },
+  {
+    "objectID": "lecture_2.html#defining-statistical-hypotheses",
+    "href": "lecture_2.html#defining-statistical-hypotheses",
+    "title": "2  Statistical Inference",
+    "section": "2.4 Defining statistical hypotheses",
+    "text": "2.4 Defining statistical hypotheses"
+  },
+  {
+    "objectID": "lecture_2.html#distributions-of-test-statistics",
+    "href": "lecture_2.html#distributions-of-test-statistics",
+    "title": "2  Statistical Inference",
+    "section": "2.5 Distributions of test statistics",
+    "text": "2.5 Distributions of test statistics"
+  },
+  {
+    "objectID": "lecture_2.html#testing-hypotheses-related-to-population-parameters",
+    "href": "lecture_2.html#testing-hypotheses-related-to-population-parameters",
+    "title": "2  Statistical Inference",
+    "section": "2.6 Testing hypotheses related to population parameters",
+    "text": "2.6 Testing hypotheses related to population parameters"
+  },
+  {
+    "objectID": "lecture_2.html#type-i-and-type-ii-errors-power-of-a-test",
+    "href": "lecture_2.html#type-i-and-type-ii-errors-power-of-a-test",
+    "title": "2  Statistical Inference",
+    "section": "2.7 Type-I and Type-II errors; Power of a test",
+    "text": "2.7 Type-I and Type-II errors; Power of a test"
+  },
+  {
+    "objectID": "lecture_2.html#tests-for-comparing-parameters-from-two-samples",
+    "href": "lecture_2.html#tests-for-comparing-parameters-from-two-samples",
+    "title": "2  Statistical Inference",
+    "section": "2.8 Tests for comparing parameters from two samples",
+    "text": "2.8 Tests for comparing parameters from two samples"
   }
 ]
