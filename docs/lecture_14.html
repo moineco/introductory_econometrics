@@ -255,8 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#install-packages" id="toc-install-packages" class="nav-link active" data-scroll-target="#install-packages"><span class="toc-section-number">14.1</span>  Install packages</a></li>
-  <li><a href="#useful-data" id="toc-useful-data" class="nav-link" data-scroll-target="#useful-data"><span class="toc-section-number">14.2</span>  Useful data</a></li>
+  <li><a href="#censored-and-truncated-data" id="toc-censored-and-truncated-data" class="nav-link active" data-scroll-target="#censored-and-truncated-data"><span class="toc-section-number">14.1</span>  Censored and Truncated data</a></li>
+  <li><a href="#install-packages" id="toc-install-packages" class="nav-link" data-scroll-target="#install-packages"><span class="toc-section-number">14.2</span>  Install packages</a></li>
+  <li><a href="#useful-data" id="toc-useful-data" class="nav-link" data-scroll-target="#useful-data"><span class="toc-section-number">14.3</span>  Useful data</a></li>
   </ul>
 </nav>
     </div>
@@ -284,8 +285,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Censoring from above takes place when cases with a value at or above some threshold, all take on the value of that threshold, so that the true value might be equal to the threshold, but it might also be higher.</p></li>
 <li><p>In the case of censoring from below, values those that fall at or below some threshold are censored.</p></li>
 </ul>
-<section id="install-packages" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="install-packages"><span class="header-section-number">14.1</span> Install packages</h2>
+<section id="censored-and-truncated-data" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="censored-and-truncated-data"><span class="header-section-number">14.1</span> Censored and Truncated data</h2>
+<p>In some data sets we do not observe values above or below a certain magnitude, due to a censoring or truncation mechanism. Examples:</p>
+<ul>
+<li><p>A central bank intervenes to stop an exchange rate falling below or going above certain levels.</p></li>
+<li><p>Dividends paid by a company may remain zero until earnings reach some threshold value.</p></li>
+<li><p>A government imposes price controls on some goods.</p></li>
+<li><p>A survey of only working women, ignoring non-working women</p></li>
+</ul>
+</section>
+<section id="install-packages" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="install-packages"><span class="header-section-number">14.2</span> Install packages</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
@@ -293,8 +304,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="useful-data" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="useful-data"><span class="header-section-number">14.2</span> Useful data</h2>
+<section id="useful-data" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="useful-data"><span class="header-section-number">14.3</span> Useful data</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/tobit.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>

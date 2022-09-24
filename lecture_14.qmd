@@ -6,6 +6,18 @@ The tobit model, also called a censored regression model, is designed to estimat
 
 - In the case of censoring from below, values those that fall at or below some threshold are censored.
 
+## Censored and Truncated data
+
+In some data sets we do not observe values above or below a certain magnitude, due to a censoring or truncation mechanism. Examples:
+
+- A central bank intervenes to stop an exchange rate falling below or going above certain levels.
+
+- Dividends paid by a company may remain zero until earnings reach some threshold value.
+
+- A government imposes price controls on some goods.
+
+- A survey of only working women, ignoring non-working women
+
 ## Install packages
 
 ```{r, message=FALSE}
