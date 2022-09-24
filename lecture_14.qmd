@@ -8,7 +8,7 @@ The tobit model, also called a censored regression model, is designed to estimat
 
 ## Install packages
 
-```{r}
+```{r, message=FALSE}
 library(ggplot2)
 library(GGally)
 library(VGAM)
