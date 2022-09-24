@@ -1,2 +1,72 @@
-# Non Stationary Time Series
+# Tobit Models
+
+The tobit model, also called a censored regression model, is designed to estimate linear relationships between variables when there is either left- or right-censoring in the dependent variable.
+
+- Censoring from above takes place when cases with a value at or above some threshold, all take on the value of that threshold, so that the true value might be equal to the threshold, but it might also be higher. 
+
+- In the case of censoring from below, values those that fall at or below some threshold are censored.
+
+## Install packages
+
+```{r}
+library(ggplot2)
+library(GGally)
+library(VGAM)
+library(stargazer)
+```
+
+## Useful data
+
+```{r}
+data <- read.csv("data/tobit.csv")
+```
+
+The dataset contains 200 observations. 
+
+- The academic aptitude variable is "apt", the reading test scores are "read" and math test scores are "math". 
+
+- The variable prog is the type of program the student is in, it is a categorical (nominal) variable that takes on three values, academic (prog = 1), general (prog = 2), and vocational (prog = 3). 
+
+- The variable id is an identification variable.
+
+Now let’s look at the data descriptively. 
+
+```{r}
+summary(data)
+```
+
+```{r}
+f <- function(x, var, bw = 15) {
+  dnorm(x, mean = mean(var), sd(var)) * length(var)  * bw
+}
+```
+
+
+```{r}
+p <- ggplot(data, aes(x = apt, fill=prog))
+```
+
+
+```{r}
+p + stat_bin(binwidth=15) +
+  stat_function(fun = f, size = 1,
+    args = list(var = data$apt))
+```
+
+```{r}
+p + stat_bin(binwidth = 1) + stat_function(fun = f, size = 1, args = list(var = data$apt, 
+    bw = 1))
+```
+
+```{r}
+cor(data[, c("read", "math", "apt")])
+```
+
+```{r}
+ggpairs(data[, c("read", "math", "apt")])
+```
+```{r}
+summary(m <- vglm(apt ~ read + math + prog, tobit(Upper = 800), data = data))
+```
+
 

@@ -161,7 +161,7 @@ summary(hourly_wage_model)
 ```
 
 ```{r, results='asis', echo=TRUE, warning=FALSE, message=FALSE}
-stargazer(type = "html", hourly_wage_model,  single.row = TRUE, header = FALSE, digits=5)
+stargazer(type = "html", hourly_wage_model,  single.row = TRUE, header = FALSE, digits=3)
 ```
 
 For the years of experience variable, or `exper`, use coefficient and Standard Error to compute the $t$ statistic:

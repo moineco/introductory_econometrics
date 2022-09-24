@@ -229,12 +229,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lecture_14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Non Stationary Time Series</span></a>
+  <a href="./lecture_14.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Tobit Models</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lecture_15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Simultaneous Equations Models</span></a>
+  <a href="./lecture_15.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Non Stationary Time Series</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lecture_16.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Simultaneous Equations Models</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -517,10 +522,10 @@ F Statistic
 <section id="example-2-hourly-wage-equation" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="example-2-hourly-wage-equation"><span class="header-section-number">2.4.1</span> <strong><code>Example 2:</code> Hourly wage equation</strong></h3>
 <p>Check the documentation for variable information</p>
-<p><strong><span class="math inline">\(lwage\)</span>:</strong> log of the average hourly earnings</p>
-<p><strong><span class="math inline">\(educ\)</span>:</strong> years of education</p>
-<p><strong><span class="math inline">\(exper\)</span>:</strong> years of potential experience</p>
-<p><strong><span class="math inline">\(tenutre\)</span>:</strong> years with current employer</p>
+<p><span class="math inline">\(lwage\)</span>: log of the average hourly earnings</p>
+<p><span class="math inline">\(educ\)</span>: years of education</p>
+<p><span class="math inline">\(exper\)</span>: years of potential experience</p>
+<p><span class="math inline">\(tenutre\)</span>: years with current employer</p>
 <ul>
 <li>Plot the variables against <code>lwage</code> and compare their distributions and slope (<span class="math inline">\(\beta\)</span>) of the simple regression lines</li>
 </ul>
@@ -852,12 +857,12 @@ tenure      0.022067218 0.003093649  7.133070 3.294407e-12</code></pre>
 <ul>
 <li>Load the <code>jtrain</code> data set. (From H. Holzer, R. Block, M. Cheatham, and J. Knott (1993), <em>Are Training Subsidies Effective? The Michigan Experience</em>, Industrial and Labor Relations Review 46, 625-636. The authors kindly provided the data.)</li>
 </ul>
-<p><strong><span class="math inline">\(year:\)</span></strong> 1987, 1988, or 1989</p>
-<p><strong><span class="math inline">\(union:\)</span></strong> =1 if unionized</p>
-<p><strong><span class="math inline">\(lscrap:\)</span></strong> Log(scrap rate per 100 items)</p>
-<p><strong><span class="math inline">\(hrsemp:\)</span></strong> (total hours training) / (total employees trained)<br>
-<strong><span class="math inline">\(lsales:\)</span></strong> Log(annual sales, $)</p>
-<p><strong><span class="math inline">\(lemploy:\)</span></strong> Log(umber of employees at plant)</p>
+<p><span class="math inline">\(year:\)</span> 1987, 1988, or 1989</p>
+<p><span class="math inline">\(union:\)</span> =1 if unionized</p>
+<p><span class="math inline">\(lscrap:\)</span> Log(scrap rate per 100 items)</p>
+<p><span class="math inline">\(hrsemp:\)</span> (total hours training) / (total employees trained)<br>
+<span class="math inline">\(lsales:\)</span> Log(annual sales, $)</p>
+<p><span class="math inline">\(lemploy:\)</span> Log(umber of employees at plant)</p>
 <ul>
 <li><p>First, use the <code>subset</code> function and it’s argument by the same name to return observations which occurred in <strong>1987</strong> and are not <strong>union</strong>.</p></li>
 <li><p>At the same time, use the <code>select</code> argument to return only the variables of interest for this problem.</p></li>
@@ -1077,9 +1082,9 @@ F Statistic
 <ul>
 <li>We will use the <code>hprice3</code> data set.</li>
 </ul>
-<p><strong><span class="math inline">\(lprice:\)</span></strong> Log(selling price)</p>
-<p><strong><span class="math inline">\(ldist:\)</span></strong> Log(distance from house to incinerator, feet)</p>
-<p><strong><span class="math inline">\(larea:\)</span></strong> Log(square footage of house)</p>
+<p><span class="math inline">\(lprice:\)</span> Log(selling price)</p>
+<p><span class="math inline">\(ldist:\)</span> Log(distance from house to incinerator, feet)</p>
+<p><span class="math inline">\(larea:\)</span> Log(square footage of house)</p>
 <ul>
 <li>Graph the prices of housing against distance from an incinerator:</li>
 </ul>

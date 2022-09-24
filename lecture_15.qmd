@@ -1,3 +1,2 @@
-# Simultaneous Equations Models
-
+# Non Stationary Time Series
 
